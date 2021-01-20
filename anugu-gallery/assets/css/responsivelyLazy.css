@@ -1,0 +1,45 @@
+/*
+ * Responsively Lazy
+ * http://ivopetkov.com/b/lazy-load-responsive-images/
+ * Copyright 2015-2016, Ivo Petkov
+ * Free to use under the MIT license.
+*/
+
+.anugu-lazy:not(img){
+    position:relative;
+    height: 0;
+    display: block;
+    overflow: hidden;
+}
+
+.anugu-lazy:not(img) img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.anugu-gallery-1-columns .anugu-lazy:not(img) img,
+.anugu-gallery-2-columns .anugu-lazy:not(img) img,
+.anugu-gallery-3-columns .anugu-lazy:not(img) img,
+.anugu-gallery-4-columns .anugu-lazy:not(img) img,
+.anugu-gallery-5-columns .anugu-lazy:not(img) img,
+.anugu-gallery-6-columns .anugu-lazy:not(img) img {
+    position: relative;
+}
+
+img.anugu-lazy{
+    width: 100%;
+}
+
+/* hide the gallery overlay by default and use JS triggers to make them appear when images load */
+
+.anugu-gallery-item.anugu-lazy-load .anugu-gallery-position-overlay {
+	display: none;
+}
+
+/* hide the captions on legacy by default and use JS triggers to make them appear when images load */
+
+.anugu-gallery-item.anugu-lazy-load .anugu-title,
+.anugu-gallery-item.anugu-lazy-load .anugu-caption {
+	visibility: hidden;
+}
